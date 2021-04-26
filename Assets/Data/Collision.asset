@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0634607770d9db64da01108e224cb62c, type: 3}
-  m_Name: Speed
+  m_Script: {fileID: 11500000, guid: 46fd5630e296c1d4da9044d3b13acae5, type: 3}
+  m_Name: Collision
   m_EditorClassIdentifier: 
-  data: 11
+  data: 0

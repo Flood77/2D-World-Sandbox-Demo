@@ -11,8 +11,8 @@ public class FloatUI : MonoBehaviour
     public Text label = null;
     public Text valueText = null;
 
-    public int min = 0;
-    public int max = 500;
+    public float min = 0;
+    public float max = 500;
     public FloatData data = null;
 
     private void OnValidate()

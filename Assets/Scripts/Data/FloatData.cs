@@ -6,4 +6,6 @@ using UnityEngine;
 public class FloatData : ScriptableObject
 {
     public float data;
+
+    public static implicit operator float(FloatData data) { return data.data; }
 }

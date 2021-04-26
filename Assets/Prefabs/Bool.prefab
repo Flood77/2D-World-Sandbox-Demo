@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggle: {fileID: 2685265346141525375}
   label: {fileID: 2997519721290436800}
-  data: {fileID: 11400000, guid: df542602c27997440a77323e64e39498, type: 2}
+  data: {fileID: 0}
 --- !u!1 &6801345254407889171
 GameObject:
   m_ObjectHideFlags: 0
