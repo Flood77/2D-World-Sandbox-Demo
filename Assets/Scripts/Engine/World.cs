@@ -21,6 +21,7 @@ public class World : MonoBehaviour
 
     public Vector2 Gravity { get { return new Vector2(0, gravity.data); } }
     public List<Body> bodies { get; set; } = new List<Body>();
+    public List<Spring> springs { get; set; } = new List<Spring>();
 
     private void Awake()
     {
@@ -32,9 +33,11 @@ public class World : MonoBehaviour
     {
         FPS.data = (1.0f / Time.deltaTime).ToString();
 
+        springs.ForEach(spring => spring.Draw());
         if (!simulate.data) return;
 
         GravitationalForce.ApplyForce(bodies, gravitation.data);
+        springs.ForEach(spring => spring.ApplyForce());
 
         float dt = Time.deltaTime;
         timeAccumulator += dt;

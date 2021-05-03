@@ -1176,6 +1176,7 @@ MonoBehaviour:
   size: {fileID: 11400000, guid: a75a313faa311c14a9e0b9535d8a5d1b, type: 2}
   density: {fileID: 11400000, guid: 7f0c05a473980644b90f76e34188e837, type: 2}
   restitution: {fileID: 11400000, guid: 3d68dcc674aca714a905c7c368c3e156, type: 2}
+  bodyType: {fileID: 11400000, guid: 075b64a10d3088a42b0219fa6f049ff6, type: 2}
 --- !u!4 &623677532
 Transform:
   m_ObjectHideFlags: 0
