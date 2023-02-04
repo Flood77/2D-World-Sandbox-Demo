@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +5,12 @@ using UnityEngine.UI;
 
 public class BoolUI : MonoBehaviour
 {
-    public Toggle toggle = null;
-    public Text label = null;
+    [SerializeField] private Toggle toggle = null;
+    [SerializeField] private BoolData data = null;
+    [SerializeField] private Text label = null;
 
-    public BoolData data = null;
 
+    //Set text based on data
     private void OnValidate()
     {
         if (data != null)
@@ -21,16 +20,19 @@ public class BoolUI : MonoBehaviour
         }
     }
 
+    //Create listener
     private void Start()
     {
         toggle.onValueChanged.AddListener(UpdateValue);
     }
-
+    
+    //Change toggle based on data
     void Update()
     {
         toggle.isOn = data.data;
     }
 
+    //Update data based on toggle click
     void UpdateValue(bool value)
     {
         data.data = value;

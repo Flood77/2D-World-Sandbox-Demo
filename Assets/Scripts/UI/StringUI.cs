@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 
 
 public class StringUI : MonoBehaviour
 {
-    public TMP_Text label = null;
+    [SerializeField] private TMP_Text label = null;
+    [SerializeField] private StringData data = null;
 
-    public StringData data = null;
-
+    //Update text with given data
     void Update()
     {
         label.text = data.data;

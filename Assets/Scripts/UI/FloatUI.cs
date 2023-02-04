@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class FloatUI : MonoBehaviour
 {
-    public Slider slider = null;
-    public Text label = null;
-    public Text valueText = null;
+    [SerializeField] private Slider slider = null;
+    [SerializeField] private Text label = null;
+    [SerializeField] private Text valueText = null;
 
-    public float min = 0;
-    public float max = 500;
-    public FloatData data = null;
+    [SerializeField] private float min = 0;
+    [SerializeField] private float max = 500;
+    [SerializeField] private FloatData data = null;
 
+    //Fill in data if it exists
     private void OnValidate()
     {
         if (data != null)
@@ -24,6 +21,7 @@ public class FloatUI : MonoBehaviour
         }
     }
 
+    //Set slider variables and listener
     private void Start()
     {
         slider.onValueChanged.AddListener(UpdateValue);
@@ -31,11 +29,13 @@ public class FloatUI : MonoBehaviour
         slider.minValue = min;
     }
 
+    //Change text to resemble data
     void Update()
     {
         valueText.text = data.data.ToString();
     }
 
+    //Change data according to slider
     void UpdateValue(float value)
     {
         data.data = value;
